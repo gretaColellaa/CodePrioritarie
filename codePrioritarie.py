@@ -3,7 +3,7 @@ import queue
 import random
 
 
-class CodaPrioritaria:
+class CodaPrioritaria:  #definisco questa classe, che sarebbe "ugualee" a PriorityQueue()
     def __init__(self):
         self._lista = []
 
@@ -21,7 +21,7 @@ class CodaPrioritaria:
         nella coda, e lo elimina
         :return:
         """
-        index, val = min(enumerate(self._lista), key=lambda x: x[1])
+        index, val = min(enumerate(self._lista), key=lambda x: x[1]) #x[0] andrebbe a prendere il primo elemento enumerate, ovvero la posizione della lista
         self._lista.pop(index)
         return val[1]
 
@@ -33,7 +33,7 @@ class CodaPrioritaria:
 
 c = queue.PriorityQueue()
 
-c.put((3, "ciao"))
+c.put((3, "ciao")) #priorità, oggetto
 c.put((1, "hello"))
 c.put((2, "test"))
 
